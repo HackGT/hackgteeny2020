@@ -1,0 +1,68 @@
+configure:
+    dev-environment:
+        - run:
+            - yarn install
+            - yarn run doc
+    est.config file:
+        - ask:
+            question: Name of the hackathon?
+            answer: hackathon
+        - ask:
+            question: Link to cms?
+            answer: cms
+            hints:
+                - Provide a link to a GraphQL endpoint for HackGT CMS
+                - Test out some queries at this endpoint to be sure :)
+            default: https://keystone.hack.gt
+        - ask:
+            question: Link to this repo?
+            hints:
+                - This will be used for automagically creating a "File an issue here" link
+            answer: repo
+        - pipe:
+            template: $curr/templates/est.config.yaml
+            output: $curr/est.config.yaml
+    developer:
+        - run:
+            - echo "the developer seems to have been configured ;)"
+
+todos:
+    - name: Run `enzo configure`
+      description: >
+          This will install the required dependencies for `est`
+            
+
+          Common issues:
+
+          `est` uses `yarn` as a package manager.
+
+          Learn more about installing `yarn` here https://yarnpkg.com/getting-started/install
+    - name: Generate and go through the docs
+      description: >
+          `est` has handy documentation to help you create a stunning website. The project uses
+          jsdoc (https://jsdoc.app/).
+
+
+          To open the docs, run the following command
+
+          `yarn run doc && open ./out/index.html`
+    - name: Build the template, and take a look at it!
+      description: >
+          `est` comes packed with cool web components to make building hackgt's next event site
+          easy and smooth.
+
+
+          It uses `parcel` as a bundler. Read more cool stuff about it here https://parceljs.org
+
+
+          Run this command to view the template
+
+          `parcel index.html`
+    - name: Work with a designer and obtain a wireframe
+      description: >
+          If you are already in contact with a designer, cool! You're a step ahead.
+
+          If not, make a design request (look at the slack channel #design-requests for more details)
+    - name: TODO
+      description: >
+          A todo to add todos to this file. Very meta indeed.

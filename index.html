@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>HackGTeeny2020</title>
+        <link rel="stylesheet" href="./style.css"/>
+    </head>
+
+    <body>
+        <est-nav>
+            <div for="left">
+                <est-logo height="25px"></est-logo>
+            </div>
+        </est-nav>
+        <div class="content">
+            <est-section background="var(--color-1)">
+                <div class="splash-container">
+                    <!-- <div class="splash splash--quote">
+                        A cool tagline
+                    </div> -->
+                    <div class="splash__item splash__illo">
+                        <div class="temp-illo"></div>
+                    </div>
+                    <div class="splash_item splash--main">
+                        <h1>HackGTeeny</h1>
+                        <div class="date">September 19, 2020</div>
+                        <div class="splash__main__item">
+                            <div>
+                                <est-register-btn></est-register-btn>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </est-section>
+            <est-section name="INFO" background="var(--color-2)">
+                <h1>info</h1>
+                <est-data>
+                    <div data-block="about"></div>
+                </est-data>
+            </est-section>
+            <est-section name="SCHEDULE" background="var(--color-3)">
+                <h1>Schedule</h1>
+                <est-schedule></est-schedule>
+            </est-section>
+            <est-section name="FAQ" background="var(--color-1)">
+                <h1>faq</h1>
+                <est-faq></est-faq>
+            </est-section>
+            <est-footer></est-footer>
+        </div>
+        <script src="src/index.js"></script>
+    </body>
+</html>

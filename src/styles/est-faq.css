@@ -1,0 +1,19 @@
+.est-faq {
+    margin-top: 20px;
+}
+
+.est-faq__container {
+    padding: 10px 0px;
+}
+
+.est-faq__container__item {
+    padding: 5px 0px;
+}
+
+.est-faq__container__item--question {
+    font-weight: bold;
+}
+
+.est-faq__container__item--answer {
+
+}

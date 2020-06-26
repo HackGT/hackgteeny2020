@@ -1,0 +1,43 @@
+est-footer {
+  --footer-bg: var(--accent-color-2);
+  --footer-color: var(--primary-color-2);
+  --footer-gh-issue-font-size: 0.75rem;
+}
+
+est-footer footer {
+  background: var(--footer-bg);
+  color: var(--footer-color);
+}
+
+.est-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.est-footer__item {
+  padding: 5px;
+}
+
+.est-footer__item--social {
+  display: flex;
+  justify-content: center;
+}
+
+.est-footer__item--social a {
+  padding: 0 5px 0 5px;
+}
+
+.est-footer__item--social img {
+  height: 35px;
+}
+
+.est-footer__gh-issue {
+  font-size: var(--footer-gh-issue-font-size);
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

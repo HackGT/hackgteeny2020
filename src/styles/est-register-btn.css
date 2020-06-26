@@ -1,0 +1,24 @@
+.est-register-btn {
+    padding: 15px;
+    border-radius: 15px;
+    font-weight: 400;
+    font-size: 1.25rem;
+    font-family: var(--primary-font);
+    background: var(--color-5);
+    cursor: pointer;
+    border: 0px;
+    transition: all 0.1s ease-out,
+        filter 0.2s ease-in;
+
+}
+
+button.est-register-btn:hover {
+    filter: brightness(1.25);
+}
+
+button.est-register-btn:active {
+    padding: 12px;
+    font-size: 1.15rem;
+    border-radius: 15px;
+}
+

@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap');
+
+@import "./src/styles/est-nav.css";
+@import "./src/styles/est-register-btn.css";
+@import "./src/styles/est-schedule.css";
+@import "./src/styles/est-select.css";
+@import "./src/styles/est-faq.css";
+@import "./src/styles/est-footer.css";
+
+:root {
+    --color-1: #AB9CE6;
+    --color-2: #AB9CE6;
+    --color-3: #AB9CE6; 
+    --color-4: #AB9CE6;  
+    --color-5: #E5E5E5;; 
+
+    /* re-export colors for better semantics */
+    --primary-color-1: white;
+    --primary-color-2: black;
+    --secondary-color-1: var(--color-2);
+    --secondary-color-2: var(--color-3);
+    --accent-color-1: var(--color-4);
+    --accent-color-2: var(--color-5);
+    --background-color: var(--color-1);
+    --muted-color: #f5f5f5;
+
+    /* fonts */
+    --primary-font: 'Baloo 2', sans-serif;
+    --secondary-font: 'Baloo 2', sans-serif;
+    
+    /* gutters */
+    --content-margin: 0px 0px; 
+    --content-padding: calc(var(--nav-height)) 20%;
+
+    /* nav */
+    /* this variable is here and not in nav-bar.css because .content needs to use it */
+    --nav-height: 60px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0px;
+    background: var(--background-color);
+    font-family: var(--secondary-font);
+    overflow-x: hidden;
+}
+
+h1 {
+    font-family: var(--primary-font);
+    margin: 0px;
+}
+
+p {
+    line-height: 1.75rem;
+}
+
+.content {
+    position: relative;
+    top: var(--nav-height);
+}
+
+.splash-container {
+    display: flex;
+    height: calc(100vh - 120px);
+}
+
+.splash {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--primary-font);
+}
+
+.splash--main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.splash--main h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    padding: 20px;
+    padding-bottom: 0px;
+}
+
+.splash__main__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    padding-bottom: 0px;
+    width: 100%;
+}
+
+.splash__main__item > div {
+    padding: 10px;
+    text-align: center;
+    width: 100%; 
+}
+
+.date {
+    font-size: 1.5rem;
+}
+
+.splash--quote {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.splash__illo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.temp-illo {
+    background: white;
+    height: 20vw;
+    width: 20vw;
+    border-radius: 50%;
+}
+
+@media (min-width: 501px) {
+
+}
+
+@media (max-width: 500px) {
+    .splash-container {
+        height: calc(600px - var(--nav-height)); 
+    }
+}

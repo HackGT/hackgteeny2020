@@ -1,0 +1,80 @@
+est-schedule {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+
+    --est-schedule-width: 100%;
+}
+
+.est-schedule__days {
+    width: var(--est-schedule-width);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.est-schedule__days button:first-child {
+    margin-left: 0px;
+}
+
+.est-schedule__days__btn {
+    background: var(--color-2);
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 1rem;
+    border: 3px solid black;
+    cursor: pointer;
+    margin-left: 40px;
+}
+
+.est-schedule__days__btn--active  {
+    background: var(--color-5);
+    color: black;
+    box-shadow: 0 0 0 5px var(--color-5);
+}
+
+.est-schedule__events {
+    width: var(--est-schedule-width);
+    display: grid;
+    grid-template-columns: 0.25fr 1fr;
+    z-index: 900;
+}
+
+.est-schedule__events--hidden {
+    display: none;
+}
+
+.est-schedule__events__item {
+    padding: 10px;
+    font-size: 1.25rem;
+}
+
+.est-schedule__events__item--time {
+    justify-self: start;
+}
+
+.est-schedule__events__item--event {
+    /* width: 50%; */
+}
+
+.est-schedule__select {
+    display: none;
+}
+
+@media (mid-width: 701px) {}
+
+@media (max-width: 700px) {
+    .est-schedule__days {
+        display: none;
+    }
+
+    .est-schedule__select {
+        display: block;
+        align-self: end;
+    }
+}
