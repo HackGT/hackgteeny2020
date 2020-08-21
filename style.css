@@ -12,11 +12,11 @@
     --color-2: #AB9CE6;
     --color-3: #AB9CE6; 
     --color-4: #AB9CE6;  
-    --color-5: #E5E5E5;; 
+    --color-5: #634CBA; 
 
     /* re-export colors for better semantics */
     --primary-color-1: white;
-    --primary-color-2: black;
+    --primary-color-2: white;
     --secondary-color-1: var(--color-2);
     --secondary-color-2: var(--color-3);
     --accent-color-1: var(--color-4);
@@ -81,6 +81,11 @@ p {
     justify-content: center;
 }
 
+.splash--main img {
+    width: 50vw;
+    height: 40vh;
+}
+
 .splash--main h1 {
     font-size: 4rem;
     font-weight: bold;
@@ -117,13 +122,85 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-left: -50px;
 }
 
-.temp-illo {
-    background: white;
-    height: 20vw;
-    width: 20vw;
-    border-radius: 50%;
+.splash__illo img {
+    width: 30vw;
+    height: 50vh;
+}
+
+#logo {
+    position: fixed;
+    top: 0px;
+    left: 30px;
+    animation: 1.5s cubic-bezier(0.22, 1, 0.36, 1) slidein--top;
+    z-index: 1001;
+}
+
+#logo img {
+    height: 100px;
+    width: 90px;
+    padding: 0px;
+}
+
+.admissions-block {
+    display: inline-block;
+    width: 45%;
+}
+
+.tracks-container {
+    display: flex;
+	flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    flex-direction: row;
+}
+
+.tracks {
+    position: relative;
+    width: 40%;
+    display: table-cell;
+}
+  
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: white;
+}
+
+.tracks:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: #634CBA;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.row {
+    display: table;
+    border-spacing: 40px;
 }
 
 @media (min-width: 501px) {

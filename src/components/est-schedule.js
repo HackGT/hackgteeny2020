@@ -2,7 +2,7 @@ import {fetchCms} from '../cms.js';
 
 const query = `
 {
-  allEvents (where: { hackathon: { name: "HackGT 7" } }) {
+  allEvents (where: { hackathon: { name: "HackGTeeny 2020" } }) {
     name
     startDay
     startTime

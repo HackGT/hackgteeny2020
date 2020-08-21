@@ -1,4 +1,4 @@
-import logo from '../../assets/brand/hackgt-logo-light.svg';
+import logo from '../../assets/brand/HGTeeny_logo.png';
 
 /**
  * Class representing the `<est-logo>` custom element

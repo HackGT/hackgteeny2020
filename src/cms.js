@@ -1,6 +1,7 @@
 import config from '../est.config.yaml';
 
 const CMS_ENDPOINT = config.cms;
+const HACKATHON = config.hackathon;
 
 /**
  * Executes a [GraphQL](https://graphql.org/) query to the
@@ -40,7 +41,7 @@ export async function fetchCms(query) {
 export async function fetchBlock(blockSlug) {
     const query = `
     {
-      allBlocks (where: { slug: "${blockSlug}" }) 
+      allBlocks (where: { slug: "${blockSlug}", hackathon: {name: "${HACKATHON}"} }) 
       {
         name
         content

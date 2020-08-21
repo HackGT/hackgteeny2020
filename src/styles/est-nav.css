@@ -5,7 +5,7 @@ est-nav {
 
     --nav-background: #634CBA;
     --nav-font-family: var(--secondary-font);
-    --nav-font-size: 1rem;
+    --nav-font-size: 1.3rem;
     --nav-font-weight: normal;
     --nav-padding-left: 5%;
     --nav-padding-right: 5%;
@@ -42,6 +42,8 @@ est-nav {
     align-items: center;
     flex-wrap: wrap;
     overflow: hidden;
+    justify-content: flex-end;
+    padding-right: var(--nav-padding-right);
 }
 
 .est-nav__list--left {
@@ -53,7 +55,7 @@ est-nav {
     justify-content: center;
 }
 
-.est-nav__list--right {
+.est-nav__list {
     justify-content: flex-end;
     padding-right: var(--nav-padding-right);
 }

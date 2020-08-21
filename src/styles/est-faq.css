@@ -12,8 +12,33 @@
 
 .est-faq__container__item--question {
     font-weight: bold;
+    background: url("../../assets/HGTeeny_FAQ_Q_small.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 1.5rem;
+    margin-left: 0;
+    height: 5vh;
+    /* width: 50vw; */
+    padding: 8vh 12vw 8vw 12vw;
+    text-align: center;
+    color: #634CBA;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .est-faq__container__item--answer {
-
+    background: url("../../assets/HGTeeny_FAQ_A_small.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 1rem;
+    padding-right: 10vw;
+    margin-left: 0;
+    padding-top: 15vh;
+    height: 10vh;
+    text-align: center;
+    color: #634CBA;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }

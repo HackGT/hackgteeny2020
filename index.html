@@ -8,22 +8,26 @@
     </head>
 
     <body>
-        <est-nav>
-            <div for="left">
-                <est-logo height="25px"></est-logo>
-            </div>
-        </est-nav>
+        <est-nav></est-nav>
         <div class="content">
+            <div id="logo">
+                <a href="https://hack.gt">
+                    <img src="assets/brand/HGTeeny_logo.png" />
+                </a>
+            </div>
             <est-section background="var(--color-1)">
+                
                 <div class="splash-container">
                     <!-- <div class="splash splash--quote">
                         A cool tagline
                     </div> -->
                     <div class="splash__item splash__illo">
-                        <div class="temp-illo"></div>
+                        <div>
+                            <img src="assets/arcadeAnimated.gif" />
+                        </div>
                     </div>
                     <div class="splash_item splash--main">
-                        <h1>HackGTeeny</h1>
+                        <img src="assets/headerAnimation.gif" />
                         <div class="date">September 19, 2020</div>
                         <div class="splash__main__item">
                             <div>
@@ -33,19 +37,90 @@
                     </div>
                 </div>
             </est-section>
-            <est-section name="INFO" background="var(--color-2)">
-                <h1>info</h1>
+            <est-section name="ABOUT" background="var(--color-2)">
+                <h1>About</h1>
                 <est-data>
                     <div data-block="about"></div>
                 </est-data>
             </est-section>
+            <est-section name="ADMISSIONS" background="var(--color-2)">
+                <h1>Admissions</h1>
+                <est-data>
+                    <div class="admissions-block">
+                        <h2>Participants</h2>
+                        <div data-block="admissions-participants"></div>
+                    </div>
+                    <div class="admissions-block">
+                        <h2>Mentors</h2>
+                        <div data-block="admissions-mentors"></div>
+                    </div>
+                </est-data>
+            </est-section>
+            <est-section name="TRACKS" background="var(--color-2)">
+                <h1>Tracks</h1>
+                <est-data>
+                    <div data-block="track-descriptions"></div>
+                </est-data>
+                <div class="tracks-container">
+                    <est-data>
+                        <div class="row">
+                            <div class="tracks">
+                                <img src="assets/app.png" alt="App Development" class="image"/>
+                                <div class="overlay">
+                                    <div class="text" data-block="app-development"></div>
+                                </div>
+                            </div>
+                            <div class="tracks">
+                                <img src="assets/web.png" alt="Web Development" class="image"/>
+                                <div class="overlay">
+                                    <div class="text" data-block="web-development"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="tracks">
+                                <img src="assets/game.png" alt="Gaming and Graphics" class="image"/>
+                                <div class="overlay">
+                                    <div class="text" data-block="gaming-and-graphics"></div>
+                                </div>
+                            </div>
+                            <div class="tracks">
+                                <img src="assets/data.png" alt="Data Science" class="image"/>
+                                <div class="overlay">
+                                    <div class="text" data-block="data-science"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </est-data>
+                </div>
+            </est-section>
             <est-section name="SCHEDULE" background="var(--color-3)">
                 <h1>Schedule</h1>
-                <est-schedule></est-schedule>
+                <p>
+                    The event will be held virtually on Saturday, September 19th from 1-6 PM EDT. More details coming soon!
+                </p>
             </est-section>
-            <est-section name="FAQ" background="var(--color-1)">
-                <h1>faq</h1>
+            <est-section name="FAQ">
+                <h1>FAQs</h1>
                 <est-faq></est-faq>
+            </est-section>
+            <est-section name="SPONSORS" background="var(--color-1)">
+                <h1>Sponsors</h1>
+                <!-- <est-data>
+                    <div data-block="sponsors"></div>
+                </est-data> -->
+                <p>
+                    More details coming soon!
+                </p>
+            </est-section>
+            <est-section name="PARTNERS" background="var(--color-1)">
+                <h1>Partners</h1>
+                <!-- <est-data>
+                    <div data-block="partners"></div>
+                </est-data> -->
+                <p>
+                    More details coming soon!
+                </p>
             </est-section>
             <est-footer></est-footer>
         </div>
