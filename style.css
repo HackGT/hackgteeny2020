@@ -145,7 +145,7 @@ p {
 }
 
 .admissions-block {
-    display: inline-block;
+    display: table-cell;
     width: 45%;
 }
 
@@ -161,12 +161,14 @@ p {
     position: relative;
     width: 40%;
     display: table-cell;
+    border: white solid 2px;
+    border-radius: 5px;
+    height: fit-content;
 }
   
 .image {
     display: block;
     width: 100%;
-    height: auto;
 }
 
 .overlay {
@@ -187,9 +189,10 @@ p {
 }
 
 .text {
-    color: #634CBA;
+    color: black;
     font-size: 20px;
     position: absolute;
+    width: 100%;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);

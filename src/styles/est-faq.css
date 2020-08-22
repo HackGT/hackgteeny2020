@@ -17,9 +17,9 @@
     background-repeat: no-repeat;
     font-size: 1.5rem;
     margin-left: 0;
-    height: 5vh;
+    height: 2vh;
     /* width: 50vw; */
-    padding: 8vh 12vw 8vw 12vw;
+    padding: 15vh 12vw 15vh 12vw;
     text-align: center;
     color: #634CBA;
     display: flex;
@@ -35,7 +35,7 @@
     padding-right: 10vw;
     margin-left: 0;
     padding-top: 15vh;
-    height: 10vh;
+    height: 7vh;
     text-align: center;
     color: #634CBA;
     display: flex;
