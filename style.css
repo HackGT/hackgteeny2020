@@ -206,12 +206,53 @@ p {
     border-spacing: 40px;
 }
 
-@media (min-width: 501px) {
-
-}
-
 @media (max-width: 500px) {
     .splash-container {
         height: calc(600px - var(--nav-height)); 
+    }
+}
+
+@media (max-width: 650px) {
+    .row {
+        display: block;
+    }
+    .admissions-block {
+        display: block;
+        width: 100%;
+    }
+    .tracks {
+        display: block;
+        margin-bottom: 10px;
+        width: 80%;
+    }
+    .text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 450px) {
+    #logo img {
+        height: 70px;
+        width: 60px;
+        margin-top: 20px;
+    }
+    .splash__illo img {
+        width: 100px;
+        height: 150px;
+    }
+    .splash--main img {
+        width: 200px;
+        height: 80px;
+    }
+    .date {
+        font-size: 1rem;
+    }
+    .text {
+        display: block;
+    }
+
+    .text p {
+        font-size: 0.3rem;
+        line-height: 12px;
     }
 }

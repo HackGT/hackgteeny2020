@@ -3,7 +3,24 @@ const navBlockClass = 'est-nav__list';
 const template = document.createElement('template');
 template.innerHTML = `
 <nav class="est-nav__nav">
-    <div class="${navBlockClass} ${navBlockClass}--center"></div>
+    <div class="est-nav__ham">
+        <svg id="est-nav__ham" class="ham hamRotate ham4" 
+            viewBox="0 0 100 100" width="80" >
+            <path
+                fill="#fff"
+                class="line top"
+                d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
+            <path
+                fill="#fff"
+                class="line middle"
+                d="m 70,50 h -40" />
+            <path
+                fill="#fff"
+                class="line bottom"
+                d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
+        </svg>
+    </div>
+    <div class="${navBlockClass} ${navBlockClass}--center est-nav__hidden--mobile"></div>
 </nav>
 `;
 
@@ -45,8 +62,6 @@ class EstNav extends HTMLElement {
     const el = template.content.cloneNode(true);
     this.appendChild(el);
 
-    console.log(this.querySelector('[for="left"]'));
-
     // Exposing utilties
     this.nav = this.querySelector('nav');
     this.navLeft = this.querySelector('[for="left"]');
@@ -66,6 +81,17 @@ class EstNav extends HTMLElement {
       this.nav.appendChild(this.navRight);
     }
 
+    const ham = this.querySelector('#est-nav__ham');
+    const list = this.querySelector('.est-nav__list--center');
+    ham.addEventListener('click', () => {
+      ham.classList.toggle('active');
+      list.classList.toggle('est-nav__display--mobile');
+    });
+    list.addEventListener('click', () => {
+      ham.classList.toggle('active');
+      list.classList.toggle('est-nav__display--mobile');
+    });
+
     // Private fieleds used to manage intersections with viewport
     this._observer = null;
     this._targets = [];
@@ -81,27 +107,38 @@ class EstNav extends HTMLElement {
      * @param {number} i The index of the section that intersected the bottom of
      * the nav bar
      */
-  // _setSectionIndex(i) {
-  //   const currentLink = this._targets[this.sectionIndex].link;
-  //   const newLink = this._targets[i].link;
+  _setSectionIndex(i) {
+    const event = new CustomEvent('change-section', {
+        detail: {
+            section: this._targets[i].section,
+            curr: this._targets[i].section.getAttribute('name'),
+            prev: this._targets[this.sectionIndex].section.getAttribute('name'),
+            link: this._targets[i].link
+        }
+    });
+    const currentLink = this._targets[this.sectionIndex].link;
+    const newLink = this._targets[i].link;
+    
+    /* BEGIN style nav */
 
-  //   /* BEGIN style nav */
+    // NOTE: the links can be null because of sections not on the nav bar
+    // this.nav.style.background = this._targets[i].section
+    //     .getAttribute('background');
+    
+    if (currentLink) {
+      currentLink.classList.remove('est-nav__current');
+    }
 
-  //   // NOTE: the links can be null because of sections not on the nav bar
-  //   this.nav.style.background = this._targets[i].section
-  //       .getAttribute('background');
-  //   if (currentLink) {
-  //     currentLink.classList.toggle('est-nav__current');
-  //   }
+    if (newLink) {
+      newLink.classList.add('est-nav__current');
+    }
 
-  //   if (newLink) {
-  //     newLink.classList.toggle('est-nav__current');
-  //   }
+    /* END style nav */
 
-  //   /* END style nav */
+    this.sectionIndex = i;
 
-  //   this.sectionIndex = i;
-  // }
+    document.body.dispatchEvent(event);
+  }
 
   /**
      * This function runs when the component has been mounted to the DOM.
