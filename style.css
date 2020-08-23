@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap');
+@font-face {
+    font-family: "Baloo 2";
+    src: url("./assets/Baloo2-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 @import "./src/styles/est-nav.css";
 @import "./src/styles/est-register-btn.css";
@@ -6,6 +12,7 @@
 @import "./src/styles/est-select.css";
 @import "./src/styles/est-faq.css";
 @import "./src/styles/est-footer.css";
+
 
 :root {
     --color-1: #AB9CE6;
@@ -25,8 +32,8 @@
     --muted-color: #f5f5f5;
 
     /* fonts */
-    --primary-font: 'Baloo 2', sans-serif;
-    --secondary-font: 'Baloo 2', sans-serif;
+    --primary-font: "Baloo 2";
+    --secondary-font: "Baloo 2";
     
     /* gutters */
     --content-margin: 0px 0px; 
