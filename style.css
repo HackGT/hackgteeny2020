@@ -190,7 +190,6 @@ p {
 
 .text {
     color: black;
-    font-size: 20px;
     position: absolute;
     width: 100%;
     top: 50%;
@@ -199,6 +198,10 @@ p {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
+}
+
+.text p {
+    font-size: 1rem;
 }
 
 .row {
