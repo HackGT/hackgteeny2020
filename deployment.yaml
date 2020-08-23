@@ -1,4 +1,4 @@
 git:
-    remote: https://github.com/HackGT/hackgteeny2020.git
-    branch: master 
-  target_port: 80
+  remote: https://github.com/HackGT/hackgteeny2020.git
+  branch: master 
+target_port: 80
