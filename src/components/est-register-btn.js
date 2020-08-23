@@ -1,7 +1,9 @@
 const template = document.createElement('template');
 template.innerHTML = `
+<a href="https://registration.teeny.hack.gt" target="_black" rel="noopener">
 <button class="est-register-btn"> 
 </button>
+</a>
 `;
 
 /**
